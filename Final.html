@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Surprise!!!!!</title>
+    <style>
+      .header {
+        padding: 0px;
+        text-align: center;
+        color: white;
+        font-size: 95px;
+        font-family:'Brush Script MT';
+        cursor: default;
+      }
+      .answers-1 {
+        position: absolute;
+        padding: 0px;
+        color: #9370DB;
+        font-size: 30px;
+        font-family: 'Comic Sans', cursive;
+        top: 46%;
+        background-color: #FFCCFF;
+        border-radius: 50px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 3px solid;
+        border-color: white;
+        transition: background-color .5s;
+        -webkit-transition: background-color .5s;
+        -moz-animation: background-color .5s;
+        -o-animation: background-color .5s;
+        -ms-transition: background-color .5s;
+      }
+      .answers-1:hover {
+        background-color: #FFE4FD;
+      }
+      .answers-2 {
+        position: absolute;
+        padding: 0px;
+        color: #9370DB;
+        font-size: 30px;
+        font-family: 'Comic Sans', cursive;
+        top: 46%;
+        background-color: #FFCCFF;
+        border-radius: 50px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 3px solid;
+        border-color: white;
+        transition: background-color .5s;
+        -webkit-transition: background-color .5s;
+        -moz-animation: background-color .5s;
+        -o-animation: background-color .5s;
+        -ms-transition: background-color .5s;
+      }
+      .answers-2:hover {
+        background-color: black;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        background-color: #F7DBF7;
+        border-radius: 20px;
+        border: 3px solid;
+        border-color: #6C6B6C;
+        outline: none;
+        position: absolute;
+        top: 46%;
+        left: 39.5%;
+        font-size: 20px;
+        font-family: Lucida Handwriting;
+        cursor: pointer;
+      }
+      .myAnswer {
+        position: absolute;
+        padding: 0px;
+        text-align: center;
+        color: white;
+        font-family:'Brush Script MT';
+        cursor: default;
+      }
+      .herChoice {
+        color: red;
+        position: absolute;
+        cursor: default;
+        opacity: 0;
+        animation: pulse 1.5s ease infinite;
+        -webkit-animation: pulse 1.5s ease infinite;
+        -moz-animation: pulse 1.5s ease infinite;
+        -o-animation: pulse 1.5s ease infinite;
+        -ms-animation: pulse 1.5s ease infinite;
+      }
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+      }
+      @-moz-keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+      }
+      @-webkit-keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+      }
+      @-o-keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+      }
+      @-ms-keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+      }
+      .heart {
+        position: relative;
+        animation-name: moving;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        color:red;
+        cursor: default;
+      }
+      @keyframes moving {
+        0%   {left:-75%; top:0px;}
+        100% {left:-25%; top:0px;}
+      }
+      .heart2 {
+        position: relative;
+        animation-name: moving2;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        color:white;
+        cursor: default;
+      }
+      @keyframes moving2 {
+        0%   {left:-50%; top:0px;}
+        100% {left:0%; top:0px;}
+      }
+      .fade-in {
+        animation: fadeIn ease 3s;
+        -webkit-animation: fadeIn ease 3s;
+        -moz-animation: fadeIn ease 3s;
+        -o-animation: fadeIn ease 3s;
+        -ms-animation: fadeIn ease 3s;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      @-moz-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      @-o-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      @-ms-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      body {
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        background-color: #fac6ce;
+        transition: background-color 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='heart0' class="heart" style=font-size:50px>&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart1' class="heart2" style=font-size:50px>&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart2' class="heart" style=font-size:50px>&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart3' class="heart2" style=font-size:50px>&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart4' class="heart" style=font-size:50px>&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart5' class="heart2" style=font-size:50px>&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart6' class="heart" style=font-size:50px>&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart7' class="heart2" style=font-size:50px>&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart8' class="heart" style=font-size:50px>&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart9' class="heart2" style=font-size:50px>&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart10' class="heart" style=font-size:50px>&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <div id='heart11' class="heart2" style=font-size:50px>&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&hearts;</div>
+    <p id='first' class="header fade-in" style='display: none'>Will You...</p>
+    <p id='second' class="header fade-in" style='display: none'>Be My ...</p>
+    <p id='third' class="header fade-in" style='display: none'>Valentine?</p>
+    <div id='yes' class="answers-1 fade-in" onclick="yesBackground();hideAll();showHeart();setTimeout(showHeart2, 5000)" style="display: none; left: 15%">YES</div>
+    <div id='no' class="answers-2 fade-in" onclick="noBackground();hideAll();showHate();setTimeout(showHate2, 2000)" style="display: none; left: 77%;">NO</div>
+    <div id='button' class="button" onclick="setTimeout(changeBackground, 3000);fade();setTimeout(hide, 1500);setTimeout(hideHearts, 3000);setTimeout(toggleText1, 3000);setTimeout(toggleText2, 4500);setTimeout(toggleText3, 6000);setTimeout(showAnswer, 7500);">Click Me If You Are My &#127849;</div>
+    <div id='answerYes' class="herChoice" style="display: none; top: 6%; left: 39.3%; font-size: 550px;">&hearts;</div>
+    <div id='love' class="myAnswer" style="display: none; top:36%; left: 41.3%; font-size: 70px;">I Love You <br /> BB</div>
+    <div id='answerNo' class="herChoice" style="display: none; top: 10%; left: 38%; font-size: 375px;">&#128405;</div>
+    <div id='hate' class="myAnswer" style="display: none; top:50%; left: 43.6%; font-size: 50px; font-family: fantasy;">HMPHHHH</div>
+    <script>
+      function toggleText1() {
+        var text = document.getElementById("first");
+        if (text.style.display === "none") {
+          text.style.display = "block";
+        }
+      }
+      function toggleText2() {
+        var text = document.getElementById("second");
+        if (text.style.display === "none") {
+          text.style.display = "block";
+        }
+      }
+      function toggleText3() {
+        var text = document.getElementById("third");
+        if (text.style.display === "none") {
+          text.style.display = "block";
+        }
+      }
+      function changeBackground() {
+        document.body.style.backgroundColor = '#ffb6c1';
+      }
+      function fade() {
+        for (var i = 0; i < 12; i++) {
+          document.getElementById("heart" + i).animate({opacity: '0'}, 3000);
+        }
+        document.getElementById('button').animate({opacity: '0'}, 1500);
+        document.getElementById('button').style.cursor = 'default';
+      }
+      function hide() {
+        document.getElementById('button').style.display = 'none';
+      }
+      function hideHearts() {
+        for (var i = 0; i < 12; i++) {
+          document.getElementById("heart" + i).style.display = 'none';
+        }
+      }
+      function showAnswer() {
+        document.getElementById("yes").style.display = "block";
+        document.getElementById("no").style.display = "block";
+      }
+      function hideAll() {
+        first.style.display = 'none';
+        second.style.display = 'none';
+        third.style.display = 'none';
+        yes.style.display = 'none';
+        no.style.display = 'none';
+      }
+      function showHeart() {
+        document.getElementById("answerYes").style.display = "block";
+        document.getElementById('answerYes').animate({opacity: '1'}, 5000);
+        document.getElementById("love").style.display = "block";
+      }
+      function showHeart2() {
+        document.getElementById("answerYes").style.opacity = "1";
+      }
+      function showHate() {
+        document.getElementById("answerNo").style.display = "block";
+        document.getElementById('answerNo').animate({opacity: '1'}, 2000);
+        document.getElementById("hate").style.display = "block";
+      }
+      function showHate2() {
+        document.getElementById("answerNo").style.opacity = "1";
+      }
+      function yesBackground() {
+        document.body.style.backgroundImage = "url('Pink Roses.jpg')";
+        document.body.style.backgroundSize = "50%";
+        document.body.style.backgroundRepeat = "round";
+      }
+      function noBackground() {
+        document.body.style.backgroundColor = "black";
+        document.body.style.transition = "background-color 4s";
+      }
+    </script>
+  </body>
+</html>
